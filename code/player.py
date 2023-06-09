@@ -14,7 +14,7 @@ class Player(pygame.sprite.Sprite):
 
 
         #general movement
-        self.image = pygame.Surface((32,64))
+        self.image = self.animations[self.status][self.frame_index]
         self.image.fill('green')
         self.rect = self.image.get_rect(center = pos)
 
@@ -35,12 +35,12 @@ class Player(pygame.sprite.Sprite):
             full_path = '/graphics/character/' + animation
             self.animations[animation]=import_folder(full_path)
         
-    def animate(self,dt):
-        self.frame_index += 4 * dt
-        if self.frame_index >= len(self.animations[self.status]):
-            self.frame_index = 0
+    # def animate(self,dt):
+    #     self.frame_index += 4 * dt
+    #     if self.frame_index >= len(self.animations[self.status]):
+    #         self.frame_index = 0
 
-        self.image = self.animations[self.status][int(self.frame_index)]
+    #     self.image = self.animations[self.status][int(self.frame_index)]
       # *************Angelly   
     
     def input(self):
