@@ -1,6 +1,6 @@
 import pygame
-from code.settings import *
-from code.support import *
+from settings import *
+from support import *
 from timer import Timer
 
 class Player(pygame.sprite.Sprite):

@@ -5,7 +5,6 @@ from overlay import Overlay
 from sprites import Generic, Water, WildFlower, Tree
 from pytmx.util_pygame import load_pygame
 from code.support import *
-
 class Level:
 	def __init__(self):
 
